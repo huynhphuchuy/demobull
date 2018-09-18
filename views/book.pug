@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h2 #{title} - #{message}
+    .container
+        - if (status === 'success')
+            p(style='color:green') Congratulation #{body.name}!
+            p Your booking has been processed and pending for approval!
+            p An email with booking information has been sent to your mailbox (
+                a(href='mailto:' + body.email) #{body.email}
+                span ), please check!!!
+        - else
+            form(method='post', action='/booking')
+                .form-group
+                    label Name
+                    input.form-control(type='text', name='name', value='Huy')
+                .form-group
+                    label Email
+                    input.form-control(type='email', name='email', value='phuchuyalias@gmail.com')
+                .form-group
+                    label Unit
+                    input.form-control(type='text', name='unit', value='[ID: 123456] Luxury Unit or whatever...', disabled=true)
+                .form-group
+                    input.btn.btn-primary(type='submit', value='Send')

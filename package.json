@@ -1,0 +1,19 @@
+{
+  "name": "demobull",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bull": "^3.4.8",
+    "bull-arena": "^2.4.5",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "nodemailer": "^4.6.8",
+    "pug": "2.0.0-beta11"
+  }
+}

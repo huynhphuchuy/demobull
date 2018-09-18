@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h2 #{title} - #{message}
+	p Example URLs
+	ul
+		li
+			a(href='/booking') Book an unit
+		li
+			a(href='/clear', style='color:red') Clear all Job (For testing purpose)

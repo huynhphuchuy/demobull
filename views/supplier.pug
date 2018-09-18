@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    h2 #{title} - #{message}
+    .container
+        - if (status === 'approve')
+            p(style='color:green') Great job!
+            p You have approved this booking!
+            p A notification email will be sent to the customter!
+        - else if(status === 'reject')
+            p(style='color:red') Poor customer!
+            p You have rejected this booking!
+            p A notification email will be sent to the customter!
+        - else
+            form(method='post', action='/supplier/request/' + email + '/' + jobId)            
+                .form-group
+                    label(style='color:green') Approve
+                    br
+                    input.form-control(type='hidden', name='request', value='approve')
+                    input.btn.btn-success(type='submit', value='Approve this booking')
+            form(method='post', action='/supplier/request/' + email + '/' + jobId)
+                .form-group
+                    label(style='color:red') Reject
+                    br
+                    input.form-control(type='hidden', name='request', value='reject')
+                    input.btn.btn-danger(type='submit',  value='Reject this booking')

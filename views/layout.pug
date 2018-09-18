@@ -1,0 +1,14 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+	body
+		h1 Menu
+		ul
+			li
+				a(href='/') Homepage
+			li
+				a(href='/arena', target = '_blank') Bull Dashboard (Queue and Job Management)
+		block content

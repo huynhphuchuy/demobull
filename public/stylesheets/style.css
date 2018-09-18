@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+h1, h2 {
+  margin-bottom: 20px !important;
+}
+
+h1 {
+  width: 300px;
+  padding-left: 160px;
+  padding-top: 10px;
+  background: url('https://raw.githubusercontent.com/OptimalBits/bull/master/support/logo%402x.png');
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
